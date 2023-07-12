@@ -1,6 +1,9 @@
 import {useParams} from 'next/navigation'
 import {useMemo} from 'react'
 
+/**
+ * params 에 대화 아이디가 있는지 확인하고 대화창이 열려있는지와, 대화 아이디를 반환한다.
+ * */
 const useConversation = () => {
   const params = useParams()
 

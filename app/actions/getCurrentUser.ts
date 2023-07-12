@@ -1,26 +1,28 @@
-import getSession from "@/app/actions/getSession";
-import prismadb from "@/app/libs/prismadb";
+import prisma from "@/app/libs/prismadb";
+import getSession from "./getSession";
 
-export const getCurrentUser = async () => {
+const getCurrentUser = async () => {
   try {
-    const session = await getSession()
+    const session = await getSession();
 
     if (!session?.user?.email) {
-      return null
+      return null;
     }
 
-    const currentUser = await prismadb.user.findUnique({
+    const currentUser = await prisma.user.findUnique({
       where: {
         email: session.user.email as string
       }
-    })
+    });
 
     if (!currentUser) {
-      return null
+      return null;
     }
 
-    return currentUser
-  } catch (error) {
-    return null
+    return currentUser;
+  } catch (error: any) {
+    return null;
   }
-}
+};
+
+export default getCurrentUser;
