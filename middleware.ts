@@ -9,6 +9,7 @@ export default withAuth({
 export const config = {
   // /users 로 시작하는 모든 route
   matcher: [
-    "/users/:path*"
+    "/users/:path*",
+    "/conversations/:path*"
   ]
 }

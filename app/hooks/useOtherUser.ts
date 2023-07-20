@@ -1,7 +1,7 @@
-import {FullConversationType} from "@/app/types";
-import {User} from "@prisma/client";
 import {useSession} from "next-auth/react";
 import {useMemo} from "react";
+import {FullConversationType} from "@/app/types";
+import {User} from "@prisma/client";
 
 /**
  * 대화에 참여한 유저들 중 현재 로그인 되어 있는 유저를 제외한 유저를 가져온다.
