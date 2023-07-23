@@ -9,6 +9,7 @@ import Avatar from "@/app/components/Avatar";
 import AvatarGroup from "@/app/components/AvatarGroup";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import {format} from "date-fns";
+import Modal from "@/app/components/Modal";
 
 interface ProfileDrawerProps {
   isOpen: boolean
@@ -25,8 +26,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = (
     data
   }
 ) => {
-  const [confirmOpen, setConfirmOpen] = useState(false);
   const otherUser = useOtherUser(data)
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const joinedDate = useMemo(() => {
     return format(new Date(otherUser.createdAt), 'PP')
@@ -34,7 +35,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = (
 
   const title = useMemo(() => {
     return data.name || otherUser.name
-  }, [])
+  }, [data.name, otherUser.name])
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
@@ -113,11 +114,11 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = (
                           </div>
                           <div className={`flex gap-10 my-8`}>
                             <div
-                              onClick={() => {
-                              }}
+                              onClick={()=>setConfirmOpen(true)}
                               className={`flex flex-col gap-3 items-center cursor-pointer hover:opacity-75`}
                             >
-                              <div className={`w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center`}>
+                              <div
+                                className={`w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center`}>
                                 <IoTrash size={20}/>
                               </div>
                               <div className={`text-sm font-light text-neutral-600`}>

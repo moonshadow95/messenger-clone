@@ -1,6 +1,4 @@
 
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 N
 app/context/ToasterContext.tsx,a\7\a7bc77905afeb59e223aa98b294d8db581b071b1
 S
@@ -57,8 +55,6 @@ L
 app/conversations/layout.tsx,e\a\ea947fef82960e2997aeac4469b613c3f348f5a6
 J
 app/conversations/page.tsx,3\c\3c94d85c86ccc31e460c4ea353802f8f53108a27
-g
-7app/conversations/[conversationId]/components/Modal.tsx,6\b\6b7c628dedee34a5d3973053ed92a374802a68fa
 J
 app/actions/getMessages.ts,a\5\a5ddea76fa672571098d86e74d47310bb58891bf
 n
@@ -78,8 +74,6 @@ A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-=
-next-env.d.ts,7\9\7948598afd6f2aa542f1b55d7b6f077a70937e77
 F
 app/hooks/useRoutes.ts,e\a\ea9eb3ff21462b7108fd8e6cc412e55c2cd34568
 J
@@ -90,8 +84,6 @@ M
 app/actions/getCurrentUser.ts,8\e\8efb4c05c60ff296c70b8da7b07d16cc354927d5
 a
 1app/conversations/components/ConversationList.tsx,a\a\aa1111df05bdfea2756ebb61f39c4d51e958c89d
-N
-app/components/AvatarGroup.tsx,4\a\4aa2cea3569b6447edd9288158f54f4d7acd2455
 P
  app/users/component/UserList.tsx,a\3\a34465b38319de9bcc436d3b83073e250e6c88e2
 B
@@ -102,8 +94,6 @@ O
 app/users/component/UserBox.tsx,c\b\cbfe5fe4b4318b817102dc045bbe4b033c23bd26
 I
 app/hooks/useOtherUser.ts,c\6\c6ffcfba653500dd22711d27cd7e93befdfd20be
-n
->app/conversations/[conversationId]/components/ConfirmModal.tsx,a\1\a12fcd9537537e6d94ab4486567663b0b73cea9f
 [
 +app/conversations/[conversationId]/page.tsx,d\2\d2be5979dec148048400c5fc124e376d81249c12
 B
